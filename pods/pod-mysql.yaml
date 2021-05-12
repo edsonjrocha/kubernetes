@@ -8,5 +8,12 @@ spec:
   containers:
     - name: mysql-container
       image: mysql
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        - name: MYSQL_DATABASE
+          value: testedb
+        - name: MYSQL_USER
+          value: root
       ports:
        - containerPort: 3306
